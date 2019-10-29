@@ -1,4 +1,4 @@
-# Repository-Pattern & Unit Of Work
+# Repository Pattern & Unit Of Work
 Exemplo de Repository Pattern para Cadastro de Aluno
 
 ## Padrões utilizados
