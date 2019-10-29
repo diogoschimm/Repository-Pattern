@@ -77,7 +77,7 @@ Os Métodos para Localizar um Registro serão responsábilidades das Interfaces 
 
 O Repository Base Implementa a Interface IUnitOfWork isso irá fazer com que cada repositório possua o Método Commit() responsável por Confirmar a Transação de uma única vez. Isso também irá obrigar os repositorios a implementarem o padrão Unit Of Work.
 
-E a implementação concreta para a Interface IRespoitory
+E a implementação concreta para a Interface IRepository<T>
 
 ```c#
     using Microsoft.EntityFrameworkCore;
