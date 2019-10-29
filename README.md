@@ -54,3 +54,29 @@ A classe de serviço do domínio implementa o contrato do IUnitOfWork
 
 ```
 
+## Repository Pattern (Repository Base)
+
+Foi adicionado uma Interface Generica para Trabalhar os Métodos Save, Update e Delete.
+Os Métodos para Localizar um Registro serão responsábilidades das Interfaces dos repositórios das entidades e não do Repositorio Base.
+
+```c#
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    namespace RepositoryPattern.Domain.Interfaces
+    {
+        public interface IRepository<T>: IUnitOfWork where T : class
+        {
+            public void Save(T entity);
+            public void Update(T entity);
+            public void Delete(T entity);
+        }
+    }
+```
+
+O Repository Base Implementa a Interface IUnitOfWork isso irá fazer com que cada repositório possua o Método Commit() responsável por Confirmar a Transação de uma única vez. Isso também irá obrigar os repositorios a implementarem o padrão Unit Of Work.
+
+
+
+
